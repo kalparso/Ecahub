@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB" customClass="giveReview">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZXS-iw-xnM">
+                    <rect key="frame" x="157" y="194" width="286" height="213"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQ3-cd-oxp">
+                            <rect key="frame" x="28" y="148" width="113" height="35"/>
+                            <color key="backgroundColor" red="0.25809151790000001" green="0.25809151790000001" blue="0.25809151790000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tapCancelBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="Isq-JR-xnG"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BI6-am-JEd">
+                            <rect key="frame" x="148" y="148" width="111" height="35"/>
+                            <color key="backgroundColor" red="0.071879081430000005" green="0.55221748349999999" blue="0.55889874699999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="Submit">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tapSubmitBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="RbQ-wC-huP"/>
+                            </connections>
+                        </button>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Enter Review" translatesAutoresizingMaskIntoConstraints="NO" id="37i-tA-1GZ">
+                            <rect key="frame" x="28" y="30" width="231" height="102"/>
+                            <color key="backgroundColor" red="0.90668845659999997" green="0.90668845659999997" blue="0.90668845659999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.25809151790000001" green="0.25809151790000001" blue="0.25809151790000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <connections>
+                                <outlet property="delegate" destination="iN0-l3-epB" id="7xr-hY-Stl"/>
+                            </connections>
+                        </textView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="286" id="C0U-jq-1O8"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="UmZ-hB-KPF"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="ZXS-iw-xnM" secondAttribute="centerX" id="PZX-Kp-X7S"/>
+                <constraint firstAttribute="centerY" secondItem="ZXS-iw-xnM" secondAttribute="centerY" id="Y2i-KX-0Px"/>
+            </constraints>
+            <connections>
+                <outlet property="cancelBtn" destination="BQ3-cd-oxp" id="4qP-sg-H75"/>
+                <outlet property="reviewView" destination="ZXS-iw-xnM" id="6qp-jm-AmN"/>
+                <outlet property="review_txtView" destination="37i-tA-1GZ" id="lzr-6s-LGm"/>
+                <outlet property="submit_btn" destination="BI6-am-JEd" id="4Ll-La-G5G"/>
+            </connections>
+            <point key="canvasLocation" x="325" y="222"/>
+        </view>
+    </objects>
+</document>

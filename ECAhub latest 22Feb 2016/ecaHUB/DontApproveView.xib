@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DontApproveView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TpQ-4D-h9A">
+                    <rect key="frame" x="36" y="84" width="528" height="432"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sEC-DG-EcV">
+                            <rect key="frame" x="0.0" y="56" width="528" height="1"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tXS-GE-JDw">
+                            <rect key="frame" x="0.0" y="363" width="528" height="2"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please provide a rejection reason" translatesAutoresizingMaskIntoConstraints="NO" id="1aD-LV-IiE">
+                            <rect key="frame" x="20" y="81" width="488" height="180"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="180" id="Mx9-Nd-Bw5"/>
+                            </constraints>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <connections>
+                                <outlet property="delegate" destination="iN0-l3-epB" id="Ctj-zu-L62"/>
+                            </connections>
+                        </textView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By clicking 'Submit' you will send a message to this member that you are unable to accept their Request." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAP-nL-8EZ">
+                            <rect key="frame" x="10" y="273" width="509" height="84"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="84" id="tif-Th-5jx"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8j-Zw-37m">
+                            <rect key="frame" x="295" y="382" width="100" height="35"/>
+                            <color key="backgroundColor" red="0.884469697" green="0.884469697" blue="0.884469697" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="Znz-bR-0qd"/>
+                                <constraint firstAttribute="width" constant="100" id="ufc-9t-dgT"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="Close">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tapCloseBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="EaD-6t-ohf"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYr-em-gE9">
+                            <rect key="frame" x="410" y="382" width="100" height="35"/>
+                            <color key="backgroundColor" red="0.14901960784313725" green="0.34901960784313724" blue="0.58431372549019611" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="uGj-8a-XZm"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="Submit">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Can't Accept Enrollment/Booking" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="muX-dd-xe4">
+                            <rect key="frame" x="10" y="7" width="509" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="abv-ZJ-w1h"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="1aD-LV-IiE" firstAttribute="top" secondItem="sEC-DG-EcV" secondAttribute="bottom" constant="24" id="1G8-BC-53w"/>
+                        <constraint firstItem="DYr-em-gE9" firstAttribute="baseline" secondItem="K8j-Zw-37m" secondAttribute="firstBaseline" id="3Hf-qM-WCC"/>
+                        <constraint firstItem="tXS-GE-JDw" firstAttribute="leading" secondItem="TpQ-4D-h9A" secondAttribute="leading" id="40w-vO-FWi"/>
+                        <constraint firstAttribute="trailing" secondItem="DYr-em-gE9" secondAttribute="trailing" constant="18" id="8fd-yu-sWJ"/>
+                        <constraint firstItem="iAP-nL-8EZ" firstAttribute="leading" secondItem="muX-dd-xe4" secondAttribute="leading" id="Byq-YV-vg0"/>
+                        <constraint firstItem="DYr-em-gE9" firstAttribute="leading" secondItem="K8j-Zw-37m" secondAttribute="trailing" constant="15" id="CSP-wg-WbI"/>
+                        <constraint firstItem="sEC-DG-EcV" firstAttribute="centerX" secondItem="muX-dd-xe4" secondAttribute="centerX" id="DnO-En-MNF"/>
+                        <constraint firstItem="muX-dd-xe4" firstAttribute="leading" secondItem="TpQ-4D-h9A" secondAttribute="leading" constant="10" id="ErC-iW-cE7"/>
+                        <constraint firstItem="1aD-LV-IiE" firstAttribute="top" secondItem="TpQ-4D-h9A" secondAttribute="top" constant="81" id="HdL-zQ-Dy1"/>
+                        <constraint firstItem="K8j-Zw-37m" firstAttribute="baseline" secondItem="DYr-em-gE9" secondAttribute="firstBaseline" id="Kbd-d4-Czh"/>
+                        <constraint firstItem="muX-dd-xe4" firstAttribute="trailing" secondItem="iAP-nL-8EZ" secondAttribute="trailing" id="MvH-Y6-LU1"/>
+                        <constraint firstItem="K8j-Zw-37m" firstAttribute="top" secondItem="DYr-em-gE9" secondAttribute="top" id="QSq-dp-Uhm"/>
+                        <constraint firstItem="K8j-Zw-37m" firstAttribute="top" secondItem="tXS-GE-JDw" secondAttribute="bottom" constant="17" id="SCJ-mR-LDz"/>
+                        <constraint firstAttribute="bottom" secondItem="K8j-Zw-37m" secondAttribute="bottom" constant="15" id="V9u-cm-ndi"/>
+                        <constraint firstItem="muX-dd-xe4" firstAttribute="top" secondItem="TpQ-4D-h9A" secondAttribute="top" constant="7" id="XWc-oF-GkJ"/>
+                        <constraint firstItem="sEC-DG-EcV" firstAttribute="centerX" secondItem="1aD-LV-IiE" secondAttribute="centerX" id="bvz-Pk-d3A"/>
+                        <constraint firstItem="tXS-GE-JDw" firstAttribute="top" secondItem="iAP-nL-8EZ" secondAttribute="bottom" constant="6" id="fy3-Bk-dqD"/>
+                        <constraint firstAttribute="trailing" secondItem="sEC-DG-EcV" secondAttribute="trailing" id="hSZ-rO-cPa"/>
+                        <constraint firstItem="1aD-LV-IiE" firstAttribute="leading" secondItem="TpQ-4D-h9A" secondAttribute="leading" constant="20" id="tqD-DZ-hPq"/>
+                        <constraint firstItem="sEC-DG-EcV" firstAttribute="leading" secondItem="tXS-GE-JDw" secondAttribute="leading" id="vQK-bq-zrh"/>
+                        <constraint firstItem="iAP-nL-8EZ" firstAttribute="top" secondItem="1aD-LV-IiE" secondAttribute="bottom" constant="12" id="wWC-b6-xye"/>
+                        <constraint firstItem="tXS-GE-JDw" firstAttribute="trailing" secondItem="sEC-DG-EcV" secondAttribute="trailing" id="x2F-vu-2v0"/>
+                        <constraint firstItem="sEC-DG-EcV" firstAttribute="top" secondItem="muX-dd-xe4" secondAttribute="bottom" constant="5" id="xxd-ug-kGb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.69999999999999996" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="TpQ-4D-h9A" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="0jf-Tw-dGl"/>
+                <constraint firstItem="TpQ-4D-h9A" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="B42-jo-VSe"/>
+                <constraint firstItem="TpQ-4D-h9A" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="36" id="FDr-Eg-SUq"/>
+                <constraint firstItem="TpQ-4D-h9A" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="84" id="t4D-Hg-hfz"/>
+            </constraints>
+            <connections>
+                <outlet property="closeBtn" destination="K8j-Zw-37m" id="OsE-Gc-FSZ"/>
+                <outlet property="main_view" destination="TpQ-4D-h9A" id="6zm-BB-Czo"/>
+                <outlet property="message_txtView" destination="1aD-LV-IiE" id="UYe-5K-78O"/>
+                <outlet property="submit_btn" destination="DYr-em-gE9" id="gG0-39-3Da"/>
+            </connections>
+            <point key="canvasLocation" x="289" y="367"/>
+        </view>
+    </objects>
+</document>
