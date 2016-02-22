@@ -494,6 +494,7 @@
     currentImg = @"1";
     
     //[selectImageOptions showInView:self.view];
+    //
     
     [self presentViewController:imagePicker animated:YES completion:nil];
     
